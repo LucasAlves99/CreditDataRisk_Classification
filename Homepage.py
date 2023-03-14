@@ -89,7 +89,7 @@ def main():
 
 @st.cache(allow_output_mutation=True)
 def carregar_df():
-    with open('df_traduzido.pkl','rb') as f:
+    with open('./Databases/df_traduzido.pkl','rb') as f:
         df_traduzido=pickle.load(f)
         # df_traduzido["Target"].replace({1:"Inadimplente",0:"N Inadimpnete"}, inplace=True)
     return df_traduzido

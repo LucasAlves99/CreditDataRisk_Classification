@@ -65,7 +65,7 @@ graph = load_lottiefile("lottiefile/graph.json")
 # ------------------------------------------------------------------------------------------------
 # Funções
 def carregar_modelo():
-    with open("RedeNeural_finalizado.sav","rb") as f:
+    with open("./Modelo/RedeNeural_finalizado.sav","rb") as f:
         model = pickle.load(f)
     return model
 
