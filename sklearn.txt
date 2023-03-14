@@ -1,2 +1,0 @@
-pip uninstall scikit-learn
-pip install scikit-learn==1.0.2
