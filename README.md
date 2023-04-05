@@ -43,6 +43,13 @@ streamlit run Homepage.py
 This project is licensed under the MIT License
 
 
+## Telas do Projeto
+* EDA
+![image](https://user-images.githubusercontent.com/50807648/230182936-02d59e74-f6e6-418e-994b-1e3a6570224f.png)
+* Predict
+![image](https://user-images.githubusercontent.com/50807648/230183185-f830b570-2603-4476-8781-2ad89d780dfa.png)
+
+
 
 
 
