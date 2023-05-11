@@ -4,6 +4,9 @@
 
 Projeto de previsão de inadimplência , que tem como objetivo, reduzir o número de clientes que não pagam os empréstimos.
 
+Essa Classificação se dá da seguinte forma, baseado nos dados de clientes inadimplentes e adimplentes passados. O alogritmo consegue efetuar 
+uma previsão de um próximo cliente, dizendo se ele pode ser um possível cliente inadimplente ou não.
+
 ## Primeiros passos
 
 ### Pre-requisitos
