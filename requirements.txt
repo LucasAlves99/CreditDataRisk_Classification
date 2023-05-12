@@ -344,6 +344,7 @@ win-unicode-console==0.5
 wincertstore==0.2
 wrapt==1.12.1
 xarray==0.20.1
+xgboost==1.7.5
 xlrd==2.0.1
 XlsxWriter==3.0.3
 xlwings==0.24.9
