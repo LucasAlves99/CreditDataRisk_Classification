@@ -65,7 +65,7 @@ graph = load_lottiefile("lottiefile/graph.json")
 # ------------------------------------------------------------------------------------------------
 # Funções
 def carregar_modelo():
-    with open("./Modelo/XGB_Classifier.sav","rb") as f:
+    with open("./Modelo/RedeNeural_finalizado.sav","rb") as f:
         model = pickle.load(f)
     return model
 
@@ -154,11 +154,11 @@ def main():
     # Juntando tudo no dataframe final
         final_df = pd.concat([other_cols,lblpc,lblie,df_ohe],axis=1)
         columns=["Grau_do_emprestimo","Propriedade_da_casa","Intencao_de_emprestimo","Idade","Renda_Anual","Tempo_de_trabalho_em_anos","Montante_do_emprestimo","Taxa_de_juro"]
-
+        st.dataframe(final_df)
     # Scalonando o resultado dos inputs
         scaler = carregar_scaler()
         final_df=scaler.transform(final_df)
-
+        st.dataframe(final_df)
     # predict
         model = carregar_modelo()
         result_proba = model.predict_proba(final_df)
