@@ -91,7 +91,6 @@ def main():
 def carregar_df():
     with open('./Databases/df_traduzido.pkl','rb') as f:
         df_traduzido=pickle.load(f)
-        # df_traduzido["Target"].replace({1:"Inadimplente",0:"N Inadimpnete"}, inplace=True)
     return df_traduzido
 
 def display_df(df_traduzido):
