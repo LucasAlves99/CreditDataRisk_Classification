@@ -2,6 +2,7 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/LucasAlves99/CreditDataRisk_Classification/blob/main/LICENSE) 
 
+# Sobre o problema
 Projeto de previsão de inadimplência , que tem como objetivo, reduzir o número de clientes que não pagam os empréstimos.
 
 Essa Classificação se dá da seguinte forma. Baseado nos dados de clientes inadimplentes e adimplentes passados, o alogritmo consegue efetuar 
@@ -21,12 +22,32 @@ O projeto está dividido em n partes:
 
 * Plot com focos no target (identificando que a classe está desbalanceada, além de observar alguns comportamentos que são mais ocorrentes em clientes inadimplentes, como idade entre 20 e 25 anos e taxa de juro de 15% por exemplo)
 
-### Parte 3: Pre-Processamento:
+### Parte 3: Pre-Processamento
 * Tratamento dos nulos.
 * Indentificação de outliers com o modelo já treinado do Pyod https://pyod.readthedocs.io/en/latest/
     * Análise univariada e bivariada para observar se ainda restavam outliers e excluí-los 
 * Encoding 
     * One Hot Encoding para atributos categóricos ordinais (representam grandeza)   
+    * Label Encoding para os atributos qualitativos nominais restantes
+* Utilização do Smote para o Balanceamento de classe 
+* Split dos dados
+* Utilização do StandardScaler para o escalonamento dos dados
+### Parte 4: Modelagem
+* Majority Learning , modelo base 78%
+* Feature Selection 
+* Tunning dos parâmetros com , GridSearch/Cross Validation
+* Testes de Hipótese
+    * Shapiro Wilk Test para analisar se os resultados estão normalizados 
+    * Teste Anova e Tukey para observar se os modelos são parecidos, nesse caso não são, então faz diferença a escolha do algoritmo
+* Treinando os modelos com seus melhores parâmetros e Modelos com parâmetros default
+
+### Parte 5: Serialização
+* Salvei dois modelos, um foi uma Rede Neural com parâmetros default ( 88% acurácia , 88% f1-score) e o outro XGBoost com tunning nos parâmetros (95% acurácia, 95% f1-score)
+* Salvando o DataFrame, encoders e scalers para ser utilizado posteriormente na interface gráfica streamlit
+
+### Parte 6: Deploying
+* 
+
 ## Primeiros passos
 
 ### Pre-requisitos
@@ -60,11 +81,6 @@ streamlit run Homepage.py
 * [Plotlty](https://plotly.com/) - Visualização
 * [Pickle](https://docs.python.org/3/library/pickle.html) - Serialização de Objetos (Salvar objetos para utiliza-los posteriormente)
 * [Streamlit](https://streamlit.io/) - Interface Gráfica
-
-## License
-
-This project is licensed under the MIT License
-
 
 ## Telas do Projeto
 * EDA
