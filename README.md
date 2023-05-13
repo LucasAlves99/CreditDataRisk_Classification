@@ -7,6 +7,26 @@ Projeto de previsão de inadimplência , que tem como objetivo, reduzir o númer
 Essa Classificação se dá da seguinte forma. Baseado nos dados de clientes inadimplentes e adimplentes passados, o alogritmo consegue efetuar 
 uma previsão de um próximo cliente, dizendo se ele pode ser um possível cliente inadimplente ou não.
 
+## Detalhes do Projeto
+O projeto está dividido em n partes:
+### Parte 1: Entendimento dos dados
+
+* Comecei renomeando as colunas para ter uma melhor interpretação ao decorrer do projeto.
+
+* Bucando valores nulos, uniques de cada coluna e quais features eram categóricas e númericas , além da descrição dos dados.
+
+### Parte 2: EDA
+
+* Plot de gráficos de frequência das features categóricas e numéricas,correlação e a utilização do scatter plot para as features com maiores correlação.
+
+* Plot com focos no target (identificando que a classe está desbalanceada, além de observar alguns comportamentos que são mais ocorrentes em clientes inadimplentes, como idade entre 20 e 25 anos e taxa de juro de 15% por exemplo)
+
+### Parte 3: Pre-Processamento:
+* Tratamento dos nulos.
+* Indentificação de outliers com o modelo já treinado do Pyod https://pyod.readthedocs.io/en/latest/
+    * Análise univariada e bivariada para observar se ainda restavam outliers e excluí-los 
+* Encoding 
+    * One Hot Encoding para atributos categóricos ordinais (representam grandeza)   
 ## Primeiros passos
 
 ### Pre-requisitos
