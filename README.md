@@ -45,9 +45,13 @@ O projeto está dividido em n partes:
 * Salvei dois modelos, um foi uma Rede Neural com parâmetros default ( 88% acurácia , 88% f1-score) e o outro XGBoost com tunning nos parâmetros (95% acurácia, 95% f1-score)
 * Salvando o DataFrame, encoders e scalers para ser utilizado posteriormente na interface gráfica streamlit
 
-### Parte 6: Deploying
+### Parte 6: Streamlit
+* O web aplicativo streamlit possui 3 páginas
+   * *Homepage* : Página de entrada 
+   * *EDA* : Análise Rápida com vários tipos de plots
+   * *Predict* : Previsão
+### Parte 7: Deploying
 * 
-
 ## Primeiros passos
 
 ### Pre-requisitos
