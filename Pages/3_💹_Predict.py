@@ -128,18 +128,17 @@ def main():
 
     btn = st.sidebar.button("Predict")
     if btn:
-        modelo = carregar_modelo()
         scaler = carregar_scaler()
         oheGrau_emprestimo = carregarOneHotEncoder()
         lbl_Propriedade_casa = carregarLabelEncoderppc()
         lbl_Intencao_emprestimo = carregarLabelEncoderie()
+    
+     # One Hot Encoding
+        df_ = pd.DataFrame([grau_emprestimo],columns=["Grau_do_emprestimo"])
+        df_ohe = oheGrau_emprestimo.transform(df_).todense()
+        # Converter a matriz em DataFrame
+        df_ohe = pd.DataFrame(df_ohe, columns=oheGrau_emprestimo.get_feature_names_out(["Grau_do_emprestimo"]))
 
-    # One Hot Encoding
-        df_ohe = pd.DataFrame([grau_emprestimo],columns=["Grau_do_emprestimo"])
-        ohe = oheGrau_emprestimo.transform(df_ohe).todense()
-        column_names=["Grau_do_emprestimo_A","Grau_do_emprestimo_B","Grau_do_emprestimo_C","Grau_do_emprestimo_D","Grau_do_emprestimo_E",
-              "Grau_do_emprestimo_F","Grau_do_emprestimo_G"]
-        df_ohe = pd.DataFrame(ohe,columns=column_names)
     # Label Encoding
     #Propriedade_da_casa
         lblpc = pd.DataFrame([tipo_casa],columns=["Propriedade_da_casa"])
@@ -154,11 +153,11 @@ def main():
     # Juntando tudo no dataframe final
         final_df = pd.concat([other_cols,lblpc,lblie,df_ohe],axis=1)
         columns=["Grau_do_emprestimo","Propriedade_da_casa","Intencao_de_emprestimo","Idade","Renda_Anual","Tempo_de_trabalho_em_anos","Montante_do_emprestimo","Taxa_de_juro"]
-        
+
     # Scalonando o resultado dos inputs
         scaler = carregar_scaler()
         final_df=scaler.transform(final_df)
-        
+
     # predict
         model = carregar_modelo()
         result_proba = model.predict_proba(final_df)
