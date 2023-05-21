@@ -79,6 +79,18 @@ def main():
     st.header("Projeto de Portfólio Risco de crédito")
     st.write("")
     st.write("Fonte : https://www.kaggle.com/datasets/laotse/credit-risk-dataset")
+
+    st.set_page_config(
+    page_title="Ex-stream-ly Cool App",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    }
+    )
     
     hide_st_style="""
             <style>
