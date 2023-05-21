@@ -66,28 +66,33 @@ graph = load_lottiefile("lottiefile/graph.json")
 # Funções
 def carregar_modelo():
     with open("./Modelo/RedeNeural_finalizado.sav","rb") as f:
-        model = pickle.load(f)
+        # model = pickle.load(f)
+        model = pd.read_pickle(f)
     return model
 
 def carregar_scaler():
     with open("./Scaler/Scaler.sav","rb") as f:
-        scaler = pickle.load(f)
+        # scaler = pickle.load(f)
+        scaler = pd.read_pickle(f)
     return scaler
 
 def carregarLabelEncoderppc():
     with open("./Encoders/lblPropriedade_da_casa","rb") as f:
-        lblPropriedade_da_casa = pickle.load(f)
+        # lblPropriedade_da_casa = pickle.load(f)
+        lblPropriedade_da_casa = pd.read_pickle(f)
     return lblPropriedade_da_casa 
 
 def carregarLabelEncoderie():
     with open("./Encoders/lblIntencao_de_emprestimo","rb") as f:
-        lblIntencao_de_emprestimo = pickle.load(f)
+        # lblIntencao_de_emprestimo = pickle.load(f)
+        lblIntencao_de_emprestimo = pd.read_pickle(f)
     return lblIntencao_de_emprestimo 
 
 
 def carregarOneHotEncoder ():
     with open("./Encoders/OHEncoder","rb") as f:
-        OHEncoder = pickle.load(f)
+        # OHEncoder = pickle.load(f)
+        OHEncoder = pd.read_pickle(f)
     return OHEncoder
 
 
