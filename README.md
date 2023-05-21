@@ -9,7 +9,7 @@ Essa Classificação se dá da seguinte forma. Baseado nos dados de clientes ina
 uma previsão de um próximo cliente, dizendo se ele pode ser um possível cliente inadimplente ou não.
 
 ## Detalhes do Projeto
-O projeto está dividido em n partes:
+O projeto está dividido em 7 partes:
 ### Parte 1: Entendimento dos dados
 
 * Comecei renomeando as colunas para ter uma melhor interpretação ao decorrer do projeto.
@@ -50,11 +50,12 @@ O projeto está dividido em n partes:
    * *Homepage* : Página de entrada 
    * *EDA* : Análise Rápida com vários tipos de plots
    * *Predict* : Previsão
-### Parte 7: Deploying
-* 
-## Primeiros passos
+### Parte 7: Deploy
+* Deploy no render: https://la99creditriskclassification.onrender.com/
 
-### Pre-requisitos
+# Primeiros passos
+
+## Pre-requisitos
 
 - Instalar as bibliotecas
 
@@ -62,7 +63,7 @@ O projeto está dividido em n partes:
 pip install -r requirements.txt
 ```
 
-### Executar o Projeto
+## Executar o Projeto
 
 - Entrar na pasta do projeto pelo cmd
 
@@ -77,7 +78,8 @@ streamlit run Homepage.py
 ```
 ![image](https://user-images.githubusercontent.com/50807648/226122129-964dee2b-095c-4221-9c22-f25a47461839.png)
 
-## Construído com
+- Ou acesse : https://la99creditriskclassification.onrender.com/
+# Construído com
 * [Pandas](https://pandas.pydata.org/) - Manipulação de Dados
 * [Scikit-learn](https://scikit-learn.org/stable/) - Modelagem
 * [Seaborn](https://seaborn.pydata.org/index.html) - Visualização de Dados
@@ -85,13 +87,27 @@ streamlit run Homepage.py
 * [Plotlty](https://plotly.com/) - Visualização
 * [Pickle](https://docs.python.org/3/library/pickle.html) - Serialização de Objetos (Salvar objetos para utiliza-los posteriormente)
 * [Streamlit](https://streamlit.io/) - Interface Gráfica
+* [Render](https://render.com/) - Deploy
 
-## Telas do Projeto
+# Telas do Projeto
+* Homepage
+![image](https://github.com/LucasAlves99/CreditDataRisk_Classification/assets/50807648/9bacc05b-730c-4e6c-830e-6b6fdc602fc3)
 * EDA
 ![image](https://user-images.githubusercontent.com/50807648/230182936-02d59e74-f6e6-418e-994b-1e3a6570224f.png)
 * Predict
 ![image](https://user-images.githubusercontent.com/50807648/230183185-f830b570-2603-4476-8781-2ad89d780dfa.png)
 
+# Modelo Aplicado
+O classificador XGB com 95% de acurácia e 95% no f1-score overfittou. Após alguns testes com dados fictícios de pessoas que possuem uma idade acima de pessoas inadimplentes(inadimplentes , segundo a base, em sua maioria, possuem de 20 a 25 anos),uma renda anual de 500.000 por ano, 5 anos de trabalho e ainda assim pedindo 2000 de empréstimo e tendo-o negado.  Acabei por Utilizar redes neurais sem parâmetros e obtive um resultado satisfatório, com 88% de acurácia e 88% de f1-score, acertando em relação a previsão de pessoas com o perfil parecido com o descrito acima.
+
+# Conclusão
+O foco desse projeto era implementar um projeto completo , end-to-end do inicio ao deploy, utilizando todo conhecimento já adquirido mas com um foco maior na parte de modelagem. 
+
+# O que eu aprendi com esse Projeto
+* Interface Streamlit
+   * Multipages  
+* Deploy
+* O que fazer em casos de Overfitting (Diminuir o Bias)
 
 
 
