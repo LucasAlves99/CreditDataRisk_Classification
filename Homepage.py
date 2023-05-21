@@ -90,7 +90,8 @@ def main():
 @st.cache(allow_output_mutation=True)
 def carregar_df():
     with open('./Databases/df_traduzido.pkl','rb') as f:
-        df_traduzido=pickle.load(f)
+        # df_traduzido=pickle.load(f)
+        df_traduzido=pd.read_pickle(f)
     return df_traduzido
 
 def display_df(df_traduzido):
