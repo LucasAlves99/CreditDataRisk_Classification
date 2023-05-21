@@ -140,8 +140,8 @@ def main():
                         st.success("Done!") 
 
     if "Scatter" in visuals:
-        selected_scatter_columns = st.sidebar.selectbox("Selecione a primeira feature",all_columns)
-        selected_scatter_columns2 = st.sidebar.selectbox("Selecione a segunda feature",all_columns)
+        selected_scatter_columns = st.sidebar.selectbox("Selecione a primeira feature",num_columns)
+        selected_scatter_columns2 = st.sidebar.selectbox("Selecione a segunda feature",num_columns)
         st.empty()
         colscatter1,colscatter2,colscatter3 = st.columns([0.3,2.5,0.3])
         with colscatter2:
