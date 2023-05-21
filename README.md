@@ -101,7 +101,7 @@ streamlit run Homepage.py
 O classificador XGB com 95% de acurácia e 95% no f1-score overfittou. Após alguns testes com dados fictícios de pessoas que possuem uma idade acima de pessoas inadimplentes(inadimplentes , segundo a base, em sua maioria, possuem de 20 a 25 anos),uma renda anual de 500.000 por ano, 5 anos de trabalho e ainda assim pedindo 2000 de empréstimo e tendo-o negado.  Acabei por Utilizar redes neurais sem parâmetros e obtive um resultado satisfatório, com 88% de acurácia e 88% de f1-score, acertando em relação a previsão de pessoas com o perfil parecido com o descrito acima.
 
 # Conclusão
-O foco desse projeto era implementar um projeto completo , end-to-end do inicio ao deploy, utilizando todo conhecimento já adquirido mas com um foco maior na parte de modelagem. 
+O foco desse projeto era implementar um projeto completo , end-to-end do início ao deploy, utilizando todo conhecimento já adquirido mas com um foco maior na parte de modelagem. 
 
 # O que eu aprendi com esse Projeto
 * Interface Streamlit
