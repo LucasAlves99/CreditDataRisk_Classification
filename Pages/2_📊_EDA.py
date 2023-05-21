@@ -65,17 +65,6 @@ analise = load_lottiefile("lottiefile/analise.json")
 def main():
     # Titulo e Animação
     st.sidebar.empty()
-    
-    #col1,col2 = st.columns([4,6])
-    #with col1:
-    #    col1.markdown("<h1 style='text-align: center; color: white;padding-top: 40%;'>Análise Exploratória</h1>", unsafe_allow_html=True)
-    #with col2:
-    #    col2.markdown("<h1 style='padding-left:20%;'>\n</h1>",unsafe_allow_html=True)
-    #    st_lottie(analise,speed=1,reverse=False,loop=True,quality="high",
-    #                height=400,
-    #                width=400,
-    #                key=None,)
-
 
     # Carregar df
     df = Homepage.carregar_df()
